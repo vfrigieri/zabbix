@@ -1,0 +1,18 @@
+Para instalar o zabbix-agent-2.0-install.sh
+
+PROCEDIMENTO:
+	Debian/Ubuntu:
+		# apt-get install dialog
+		# chmod +x zabbix-agent-2.0-install.sh
+		# ./zabbix-agent-2.0-install.sh
+
+
+	RedHat/CentOS:
+		# yum install dialog
+		# chmod +x zabbix-agent-2.0-install.sh
+		# ./zabbix-agent-2.0-install.sh
+
+
+OBSERVAÇÃO IMPORTANTES: 
+	Não esquecer que nas distribuições Red Hat e CentOS existem regras de iptables e SELinux configuradas.
+
