@@ -206,7 +206,7 @@ echo -n "* Compiling... " >> $INSTALLLOG
 if [[ -d $INSTALLDIR ]]; then
 	rm -rf $INSTALLDIR || exit 1
 fi
-cd PKGDIR/zabbix-$VERSION
+cd $PKGDIR/zabbix-$VERSION
 ./configure --prefix=$INSTALLDIR --mandir=/usr/share/man --disable-server --disable-static --disable-proxy --enable-agent --with-libcurl --with-ssh2 --with-ldap &>> $INSTALLLOG &&
 make -j $CPUNUM &>> $INSTALLLOG &&
 make install &>> $INSTALLLOG || exit 1
