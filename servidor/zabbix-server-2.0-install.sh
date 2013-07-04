@@ -12,20 +12,20 @@
 # Authores:     Alexandre Laniado <alexandre.lt@4linux.com.br>
 #           	Tassya Ventura Frigieri   <tassya.frigieri@4linux.com.br>
 
-SISTEMA=$(dialog --stdout --title 'Perfil' --menu 'Escolha o perfil da instalação:' 0 0 0 \
-   Debian/Ubuntu       'Instalação .deb' \
-   RedHat/CentOS       'Instalação .rpm' )           
+SISTEMA=$(dialog --stdout --title 'Perfil' --menu 'Escolha o perfil da instalacao:' 0 0 0 \
+   Debian/Ubuntu       'Instalacao .deb' \
+   RedHat/CentOS       'Instalacao .rpm' )           
 if [ $SISTEMA == "Debian/Ubuntu" ]; then
-	MYVERSION=$(dialog --stdout --title 'Release' --inputbox 'Favor inserir o NOME da versão do sistema. EX: squeeze' 0 40)
+	MYVERSION=$(dialog --stdout --title 'Release' --inputbox 'Favor inserir o NOME da versao do sistema. EX: squeeze' 0 40)
 fi
 
-VERSION=$(dialog --stdout --title 'Versão' --inputbox 'Favor inserir a versão do zabbix' 0 40)
+VERSION=$(dialog --stdout --title 'Versao' --inputbox 'Favor inserir a versao do zabbix' 0 40)
 SERVERIP=$(dialog --stdout --title 'IP do Servidor' --inputbox 'Favor inserir o IP do servidor zabbix' 0 50)
 
-TIPOBANCO=$(dialog --stdout --title 'Base de Dados' --menu 'Qual o banco de dados que será utilizado:' 0 45 0 \
+TIPOBANCO=$(dialog --stdout --title 'Base de Dados' --menu 'Qual o banco de dados que sera utilizado:' 0 45 0 \
    PostgreSQL    'Base de dados')
 
-BANCO=$(dialog --stdout --title 'Banco de Dados' --menu 'O Banco de dados será local ou remoto:' 0 45 0 \
+BANCO=$(dialog --stdout --title 'Banco de Dados' --menu 'O Banco de dados sera local ou remoto:' 0 45 0 \
    Localhost    'Base de dados' \
    Remoto       'Base de dados' )
 if [ $BANCO == "Localhost" ]; then
